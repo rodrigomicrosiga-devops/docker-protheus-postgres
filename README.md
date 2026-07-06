@@ -1,6 +1,6 @@
 # 🐳 TOTVS Protheus - Cluster PostgreSQL Automatizado
 
-Este repositório isola a camada de persistência de dados do ecossistema Protheus dentro da organização **`rodrigomicrosiga-devops`**. Ele provisiona um cluster **PostgreSQL 16** totalmente automatizado, configurado nativamente com as regras de *locale* e *encoding* restritas exigidas pelo dicionário de dados da TOTVS.
+Este repositório é um componente isolado da arquitetura TOTVS Protheus Modern DevOps [https://github.com/rodrigomicrosiga-devops/totvs-protheus-modern-devops], e isola a camada de persistência de dados do ecossistema Protheus dentro da organização **`rodrigomicrosiga-devops`**. Ele provisiona um cluster **PostgreSQL 16** totalmente automatizado, configurado nativamente com as regras de *locale* e *encoding* restritas exigidas pelo dicionário de dados da TOTVS.
 
 ---
 
