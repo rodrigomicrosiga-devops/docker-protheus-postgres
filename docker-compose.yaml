@@ -1,0 +1,29 @@
+networks:
+  protheus_network:
+    name: protheus_backend_net
+    driver: bridge
+
+volumes:
+  postgres_data:
+    name: protheus_postgres_volume
+
+services:
+  protheus_postgres:
+    image: postgres:16
+    container_name: protheus_postgres
+    restart: always
+    networks:
+      - protheus_network
+    ports:
+      - "${POSTGRES_PORT}:5432"
+    environment:
+      - POSTGRES_USER=${POSTGRES_ROOT_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_ROOT_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_NAME=${DB_NAME}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      # Injeta o script de criação automaticamente na pasta de bootstrap do Postgres
+      - ./init-protheus.sh:/docker-entrypoint-initdb.d/init-protheus.sh
