@@ -1,5 +1,7 @@
 # 🐳 TOTVS Protheus - Cluster PostgreSQL Automatizado
 
+> ⚠️ **Repositório descontinuado / protótipo antigo.** Não confundir com [`docker-postgres-protheus`](https://github.com/rodrigomicrosiga-devops/docker-postgres-protheus), que é o repositório oficial e mantido — possui Dockerfile próprio, CI/CD publicando `rodrigomicrosiga/postgres-dev` no Docker Hub e é o que efetivamente roda no cluster Kubernetes. Este repositório aqui não tem Dockerfile (usa a imagem `postgres:16` vanilla direto do Docker Hub) e não recebe mais atualizações. Mantido apenas por histórico.
+
 Este repositório é um componente isolado da arquitetura TOTVS Protheus Modern DevOps [https://github.com/rodrigomicrosiga-devops/totvs-protheus-modern-devops], e isola a camada de persistência de dados do ecossistema Protheus dentro da organização **`rodrigomicrosiga-devops`**. Ele provisiona um cluster **PostgreSQL 16** totalmente automatizado, configurado nativamente com as regras de *locale* e *encoding* restritas exigidas pelo dicionário de dados da TOTVS.
 
 ---
